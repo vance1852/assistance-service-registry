@@ -1,0 +1,70 @@
+{
+  "facts": {
+    "agreements": [
+      {
+        "id": "a-1",
+        "area": "hill",
+        "owner": "hill",
+        "agent": "hill",
+        "service": "access",
+        "language": "zh",
+        "active": [
+          480,
+          1100
+        ],
+        "continue_until": 1110
+      }
+    ]
+  },
+  "events": [
+    {
+      "at": 630,
+      "kind": "register",
+      "agency": "hill",
+      "seat": "a2",
+      "service": "access",
+      "language": "zh",
+      "version": 1
+    },
+    {
+      "at": 630,
+      "kind": "heartbeat",
+      "agency": "hill",
+      "seat": "a2",
+      "service": "access",
+      "language": "zh",
+      "version": 1,
+      "until": 660
+    },
+    {
+      "at": 645,
+      "kind": "intake",
+      "session": "case-17",
+      "area": "hill",
+      "service": "access",
+      "language": "sign",
+      "accepted_alternatives": []
+    },
+    {
+      "at": 646,
+      "kind": "intake",
+      "session": "case-18",
+      "area": "hill",
+      "service": "access",
+      "language": "sign",
+      "accepted_alternatives": [
+        [
+          "access",
+          "zh"
+        ]
+      ]
+    },
+    {
+      "at": 648,
+      "kind": "answer",
+      "session": "case-18",
+      "seat": "a2"
+    }
+  ],
+  "exchanges": []
+}

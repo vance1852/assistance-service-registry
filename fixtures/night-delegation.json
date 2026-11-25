@@ -1,0 +1,184 @@
+{
+  "facts": {
+    "agreements": [
+      {
+        "id": "a-9",
+        "area": "river",
+        "owner": "river",
+        "agent": "harbor",
+        "service": "lost",
+        "language": "yue",
+        "active": [
+          1200,
+          1260
+        ],
+        "continue_until": 1270
+      },
+      {
+        "id": "a-10",
+        "area": "river",
+        "owner": "river",
+        "agent": "harbor",
+        "service": "lost",
+        "language": "zh",
+        "active": [
+          1200,
+          1300
+        ],
+        "continue_until": 1310
+      },
+      {
+        "id": "a-11",
+        "area": "river",
+        "owner": "river",
+        "agent": "rail",
+        "service": "lost",
+        "language": "zh",
+        "active": [
+          1255,
+          1320
+        ],
+        "continue_until": 1330
+      }
+    ]
+  },
+  "events": [
+    {
+      "at": 1241,
+      "kind": "register",
+      "agency": "harbor",
+      "seat": "h1",
+      "service": "lost",
+      "language": "yue",
+      "version": 3
+    },
+    {
+      "at": 1241,
+      "kind": "register",
+      "agency": "harbor",
+      "seat": "h1",
+      "service": "lost",
+      "language": "zh",
+      "version": 6
+    },
+    {
+      "at": 1243,
+      "kind": "heartbeat",
+      "agency": "harbor",
+      "seat": "h1",
+      "service": "lost",
+      "language": "yue",
+      "version": 3,
+      "until": 1265
+    },
+    {
+      "at": 1244,
+      "kind": "heartbeat",
+      "agency": "harbor",
+      "seat": "h1",
+      "service": "lost",
+      "language": "zh",
+      "version": 6,
+      "until": 1300
+    },
+    {
+      "at": 1252,
+      "kind": "intake",
+      "session": "case-8",
+      "area": "river",
+      "service": "lost",
+      "language": "yue",
+      "accepted_alternatives": [
+        [
+          "lost",
+          "zh"
+        ]
+      ]
+    },
+    {
+      "at": 1254,
+      "kind": "answer",
+      "session": "case-8",
+      "seat": "h1"
+    },
+    {
+      "at": 1256,
+      "kind": "register",
+      "agency": "rail",
+      "seat": "r4",
+      "service": "lost",
+      "language": "zh",
+      "version": 1
+    },
+    {
+      "at": 1256,
+      "kind": "heartbeat",
+      "agency": "rail",
+      "seat": "r4",
+      "service": "lost",
+      "language": "zh",
+      "version": 1,
+      "until": 1290
+    },
+    {
+      "at": 1259,
+      "kind": "invite",
+      "handoff_id": "h-26",
+      "session": "case-8"
+    },
+    {
+      "at": 1260,
+      "kind": "withdraw",
+      "agency": "harbor",
+      "seat": "h1",
+      "service": "lost",
+      "language": "yue",
+      "version": 4
+    },
+    {
+      "at": 1261,
+      "kind": "heartbeat",
+      "agency": "harbor",
+      "seat": "h1",
+      "service": "lost",
+      "language": "yue",
+      "version": 3,
+      "until": 1300
+    },
+    {
+      "at": 1263,
+      "kind": "agreement_change",
+      "agreement": "a-11",
+      "active": [
+        1255,
+        1262
+      ],
+      "continue_until": 1268
+    },
+    {
+      "at": 1264,
+      "kind": "accept",
+      "handoff_id": "h-26",
+      "seat": "r4",
+      "accepted_at": 1261
+    },
+    {
+      "at": 1269,
+      "kind": "reconnect",
+      "session": "case-8"
+    }
+  ],
+  "exchanges": [
+    {
+      "method": "POST",
+      "path": "/seats/{id}/handoffs",
+      "match": {
+        "handoff_id": "h-26"
+      },
+      "status": 202,
+      "response": {
+        "result": "received"
+      }
+    }
+  ]
+}
