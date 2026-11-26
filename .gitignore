@@ -9,4 +9,7 @@ build/
 coverage/
 __pycache__/
 *.py[cod]
+dispatch-state.json
+dispatch-state.json.tmp
+*.bad-*
 .DS_Store
